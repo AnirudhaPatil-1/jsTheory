@@ -105,3 +105,21 @@
 // // hello1
 // // hello2
 // // catch: some result
+
+//MAKING setTimeout SYNCHRONOUS
+// let ms = 50000;
+function wait(ms){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(ms);
+            console.log("code is running")
+        }, ms);
+    });
+}
+wait(5000);
+
+then((data) => {
+    console.log(data);
+})
+
+
