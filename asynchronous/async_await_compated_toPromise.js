@@ -1,4 +1,5 @@
 const { escapeRegExp } = require("pdf-lib");
+const { promise } = require("selenium-webdriver");
 
 let abc = new Promise(function(resolve, reject){
     console.log(1);
@@ -15,3 +16,10 @@ let abc = new Promise(function(resolve, reject){
 // let abc = await browser.get("https://www.google.com");
 // console.log(1);
 // console.log(2);  
+
+//NOTES ON ASYNC FUNCTION AND AWAIT
+// await can only be written inside a async function.
+// async await compared to promise:
+// 1. async is the promise
+// 2. await makes the code below .then part 
+// 3. the async fn return is the resolve part and if not mentioned then undefined is returned
