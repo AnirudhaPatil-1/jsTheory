@@ -23,3 +23,5 @@ let abc = new Promise(function(resolve, reject){
 // 1. async is the promise
 // 2. await makes the code below .then part 
 // 3. the async fn return is the resolve part and if not mentioned then undefined is returned
+
+// learned calback, promises, async await
