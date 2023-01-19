@@ -25,3 +25,6 @@ let abc = new Promise(function(resolve, reject){
 // 3. the async fn return is the resolve part and if not mentioned then undefined is returned
 
 // learned calback, promises, async await
+
+//promise.all
+// it is a method on promise that takes array of promises and waits till the last of the promise is completed.
