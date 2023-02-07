@@ -6,4 +6,4 @@ function add(x){
 
 let add2 = add(2);
 // console.log(add2); //Output -> [Function (anonymous)]
-add2(3); //output -> 5
+add2(3); //output -> 
