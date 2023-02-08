@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pepcoding</title>
+        <style>
+            /* SIMPLE SELECTOR */
+            /* h1{
+                color: aqua;
+                /* background-color: aquamarine; */
+            /* }
+            p{  
+                background-color: pink;
+            }
+            #pass{
+                text-decoration: underline;
+            }
+            #spanner{
+                text-decoration:dotted;
+                color: aquamarine;
+            }
+            #googleLink{
+                text-decoration:solid;
+            } */ 
+
+            /* COMBINATOR SELECTOR */
+            /* .lvl1 p{
+                color: blue;
+            }
+            .lvl1 > p{
+                background-color: red;
+            }
+            .lvl + p{
+                color: orange;
+            }
+            div + p{
+                color: aquamarine;
+            }
+            div ~ p{
+                background-color:  yellow;
+            } */
+            /* ATTRIBUTE */
+            label[for]{
+                color:blue;
+            }
+            label[for = "mail"]{
+                background-color: red;
+            }
+            input[type = "text"]{
+                background-color: aqua;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <form >
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <label for="mail">Email</label>
+            <input type="email" id="mail">
+            <label for="pass">Password</label>
+            <input type="password" id="pass">
+            <label for="">Button</label>
+            <input type="button">
+        </form>
+        <div class="lvl1">
+            <p>first paragraph</p>
+            <div class="lvl2">
+                <p>Lorem ipsum dolor sit </p>
+                <div class="lvl3">
+                    <p>level 3</p>
+                </div>
+            </div>
+            <div>
+                <a href="">anchor tag</a>
+            </div>
+        </div>
+        <p>immediate paragraph</p>
+        <p>latter paragraph</p>
+
+
+
+        <!-- heading -->
+        <h1>Hello everyone</h1>
+        <h2>Hello everyone</h2>
+        <h3>Hello everyone</h3>
+        <h4>Hello everyone</h4>
+        <h5>Hello everyone</h5>
+        <h6>Hello everyone</h6>
+        <!--paragraph-->
+        <p class="division">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis delectus tempora autem tenetur, illum dignissimos quidem earum dolorem hic aperiam repellendus temporibus, odio enim amet, illo facere culpa debitis mollitia!
+        </p>   
+
+        <!-- anchor tag  -->
+        <a href="https://www.google.com" id="googleLink">Go to google</a>
+
+        <!-- division -->
+        <div class="division division 2"> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, velit. Soluta voluptas blanditiis recusandae ea autem quo molestias alias excepturi asperiores consequuntur, corporis quis, provident illum iure pariatur reprehenderit? Ratione!</p>
+        </div>
+
+        <!-- unordered list -->
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+        <!-- ordered list -->
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+
+        <!-- span -->
+        <span id="spanner">
+            <h4 id="spanner">wavy lines</h4>
+            Content filling
+        </span>
+
+        <!-- image -->
+        <img width="500" src="./TempScreenshot.jpg" alt="temp image">
+        
+        
+    </body>
+</html>
