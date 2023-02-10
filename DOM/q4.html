@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 5rem;
+    
+            
+        }
+        .movies{
+            height: 10rem;
+            width: 10rem;
+            margin: 2rem;
+            background-color: lightslategray;
+        }
+        .price{
+            background-color: lightsalmon;
+            height: 8rem;
+            padding: 1.5rem;
+            font-size: 2rem;
+        }
+        .heading{
+            background-color: lightgreen;
+            height: 2rem;
+        }
+        .heading,
+        .price{
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        h1{
+            top: 0px;
+            
+        }
+        select{
+            width: 8rem;
+            /* display: block; */
+        }
+        select,
+        h1{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>BOOK MY SHOW</h1>
+    <select>
+        <option value="none">None</option>
+        <option value="comedy">Comedy</option>
+        <option value="romance">Romance</option>
+    </select>
+    <div class="movies">
+        <h3 class="heading">Example-1</h3>
+        <p class="price" data-category="comedy">Rs.100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-2</h3>
+        <p class="price" data-category="romance">Rs.200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-3</h3>
+        <p class="price" data-category="comedy">Rs.100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-4</h3>
+        <p class="price" data-category="romance">Rs.200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-5</h3>
+        <p class="price" data-category="comedy">Rs.100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-6</h3>
+        <p class="price" data-category="romance">Rs.200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-7</h3>
+        <p class="price" data-category="comedy">Rs.100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-8</h3>
+        <p class="price" data-category="romance">Rs.200</p>
+    </div>
+    <script>
+        let select = document.querySelector("select");
+        let allMovies = document.querySelectorAll(".movies");
+        select.addEventListener("change", (e) => {
+            let selectValue = select.value;
+            if(selectValue === "none"){
+                //Display All
+                allMovies.forEach((movie) => {
+                    movie.style.display = "block";
+                })
+            }
+            else{
+                //Filter
+                allMovies.forEach((movie) => {
+                    let pElem = movie.querySelector("p");
+                    let movieGenre = pElem.getAttribute("data-category");
+                    if(selectValue === movieGenre){
+                        movie.style.display = "block";
+                    }
+                    else{
+                        movie.style.display = "none";
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>
