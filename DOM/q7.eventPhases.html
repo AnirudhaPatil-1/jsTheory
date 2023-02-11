@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Phases</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+        .orange{
+            background-color: orange;
+            height: 30rem;
+            width: 30rem;
+            justify-content: center;
+            display: flex;
+        }
+        .blue{
+            background-color: blue;
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+            justify-content: center;
+
+        }
+        .yellow{
+            background-color: yellow;
+            height: 10rem;
+            width: 10rem;
+            /* justify-content: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="orange">
+        <div class="blue">
+            <div class="yellow"></div>
+        </div>
+    </div>
+    <script>
+        let orange = document.querySelector(".orange");
+        let blue = document.querySelector(".blue");
+        let yellow = document.querySelector(".yellow");
+        orange.addEventListener("click", (e) => {
+            alert("orange");
+            alert(e.eventPhase);
+            console.log(e.target);
+            console.log(e.currentTarget);
+            
+            
+        }, true);
+        blue.addEventListener("click", (e) => {
+            alert("blue1");
+            alert(e.eventPhase);
+            
+            // e.stopImmediatePropagation();
+            // e.stopPropagation();
+        })
+        blue.addEventListener("click", (e) => {
+            alert("blue2");
+            alert(e.eventPhase);
+            
+            
+        })
+        yellow.addEventListener("click", (e) => {
+            alert("yellow");
+            alert(e.eventPhase);
+
+        })
+    </script>
+</body>
+</html>
