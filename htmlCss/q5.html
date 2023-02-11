@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 5</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .card{
+            background-color: lightblue;
+            height: 10rem;
+            width: 10rem;
+            border: 2px solid black;
+            margin: 1rem;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card red">red</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+    </div>
+    <script>
+        //Q. Create a generic function to select all sibling of a given node. Using that function delete all siblings of red card
+        //Approach 1.
+        let redElemNode = document.querySelector(".red");
+        // deleteAllSiblings(redElemNode);
+        
+        function deleteAllSiblings(redElem){
+            let before = redElem.previousElementSibling;
+            let after = redElem.nextElementSibling;
+
+            while(before){
+                before.remove();
+                beforeElem = redElem.previousElementSibling;
+            }
+            while(after){
+                after.remove();
+                afterElem = redElem.nextElementSibling;
+            }
+            
+        }
+        //Approach 2
+        let allCards = document.querySelectorAll(".card");
+        // let redElemNode = document.querySelector(".red");
+        allCards.forEach((card) => {
+            if(card !== redElemNode) card.remove();
+        })
+        
+    </script>
+</body>
+</html>
