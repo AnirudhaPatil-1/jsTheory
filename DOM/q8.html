@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 8</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .pink{
+            background-color: pink;
+            height: 20rem;
+            width: 20rem;
+            margin: 1rem;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;  */
+            
+            
+            
+        }
+        .blue{
+            background-color: blue;
+            height: 10rem;
+            width: 10rem;
+            margin: auto;
+
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="pink">
+        <div class="blue"></div>
+    </div>
+    <script>
+        let pink = document.querySelector(".pink");
+        let blue = document.querySelector("blue");
+        pink.addEventListener("click", (e) => {
+            // alert("pink")
+            if(e.target === e.currentTarget){
+                alert("pink");
+            }
+        });
+        
+
+    </script>
+</body>
+</html>
