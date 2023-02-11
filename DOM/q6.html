@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 6</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            /* align-content: end; */
+        }
+        .card{
+            background-color: aliceblue;
+            height: 10rem;
+            width: 10rem;
+            border: 2px solid black;
+            margin: 1rem;
+            
+            
+            /* align-content: center; */
+        }
+    </style>
+</head>
+<body>  
+    <div class="card">1</div>
+    <script>
+        let card = document.querySelector(".card");
+        card.addEventListener("mouseenter", (e) => {
+            card.style.backgroundImage = "url(./TempScreenshot.jpg)"
+        })
+        card.addEventListener("mouseleave", (e) => {
+            card.style.backgroundImage = "none";
+
+        })
+    </script>
+</body>
+</html>
