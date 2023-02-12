@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 9</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 5rem;
+
+        }
+        .card{
+            background-color: aqua;
+            height: 10rem;
+            width: 10rem;
+            border: 5px red dashed;
+        }
+        .solid{
+            border: 2px solid !important;
+        }
+    </style>
+</head>
+<body>  
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card solid"></div>
+    <div class="card "></div>
+    <script>
+        let allCards = document.querySelectorAll(".card");
+        let prevCard;
+        allCards.forEach((card) => {
+            card.addEventListener("mouseleave", (e) => {
+                prevCard = e.currentTarget;
+            })
+            card.addEventListener("mouseenter", (e) => {
+                if(!prevCard) return;
+
+                prevCard.classList.remove("solid");
+                allCards.forEach((otherCards) => {
+                    if(prevCard !== otherCards){
+                        otherCards.classList.add("solid");
+                    }
+                    
+                })
+
+             })
+        })
+
+    </script>
+</body>
+</html>
