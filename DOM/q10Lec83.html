@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring keyboard events Q.10</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+        }
+        input{
+            margin: 10rem 10rem;
+            /* margin-top: 10rem; */
+            width: 25rem;
+            height: 3rem;
+        }
+        p{
+            text-align: center;
+            font-size: 3rem;
+            /* position: relative; */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="pass">
+    <p>Caps on!</p>
+    <script>
+        let inputElem = document.querySelector("input");
+        let pElem = document.querySelector("p");
+        let shiftKey;
+
+        inputElem.addEventListener("keydown", (e) => {
+            if(e.getModifierState("CapsLock")){
+                pElem.style.display = "block";
+                e.preventDefault();
+
+            }else{
+                pElem.style.display = "none";
+            }
+
+            if(!shiftKey) e.preventDefault();
+        })
+
+        //shift toggling
+        document.documentElement.addEventListener("keydown", (e) => {
+            let myKey = e.key;
+            if(myKey === "Shift") shiftKey = true;
+        })
+        document.documentElement.addEventListener("keyup", (e) => {
+            let myKey = e.key;
+            if(myKey === "Shift") shiftKey = false;
+        })
+
+    </script>
+</body>
+</html>
