@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 11 Resolve Logically using DOM methods and properties</title>
+    <style>
+        *{box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .pink{
+            background-color: pink;
+            height: 40rem;
+            width: 40rem;
+            /* margin: 5rem; */
+            margin: auto;
+        }
+        .green{
+            background-color: green;
+            height: 30rem;
+            width: 30rem;
+            margin: auto;
+        }
+        .blue{
+            background-color: blue;
+            height: 20rem;
+            width: 20rem;
+            margin: auto;
+        }
+        .yellow{
+            background-color: yellow;
+            height: 10rem;
+            width: 10rem;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pink">
+        <div class="green">
+            <div class="blue">
+                <div class="yellow"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let divElem = document.querySelector("div");
+        //Sol 1.
+        // while(divElem.children.length > 0){
+        //     divElem = divElem.children[0];
+        // }
+        // divElem.remove();
+
+        // Sol 2 Recursively
+        // function removeDeepest(divElem){
+        //     if(divElem.children.length > 0){
+        //         removeDeepest(divElem.children[0]);
+        //     }
+        //     else{
+        //         divElem.remove();
+        //         return;
+                
+        //     }
+        // }
+        // removeDeepest(divElem);
+
+        //Sol 3 One liner
+        let allDivElems = document.querySelectorAll("div");
+        allDivElems[3].remove();
+
+    </script>
+    
+</body>
+</html>
