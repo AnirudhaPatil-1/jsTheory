@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q13 Lec 86</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Q 13 Lec 86</h1> -->
+    <div></div>
+    <script>
+        //Q13. 
+        // without using media queries change the background color as
+        // desktop - lightpink
+        // tablet - lightblue
+        // mobile - lightgreen
+        let divElem = document.querySelector("div");
+        window.addEventListener("resize", (e) => {
+            let width = window.innerWidth;
+            if(width <= 600){
+                divElem.style.backgroundColor = "lightgreen";
+            }
+            else if(width <= 1024){
+                divElem.style.backgroundColor = "lightblue";
+            }
+            else{
+                divElem.style.backgroundColor = "lightpink";
+            }
+
+        })
+
+
+
+    </script>
+</body>
+</html>
