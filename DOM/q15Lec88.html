@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q15 Lec 88</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            padding: 0;
+            
+        }
+        .balls{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 20rem;
+             
+            
+        }
+        .ball{
+            background-color: red;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+    <script>
+        //Q. make loading animation
+        let  allBalls = document.querySelectorAll(".ball");
+
+        function animateBalls(idx){
+            idx = idx%allBalls.length;
+
+            let currBall = allBalls[idx];
+            let prevBall;
+            if(idx === 0) prevBall = allBalls[allBalls.length - 1 ];
+            else prevBall = allBalls[idx - 1];
+
+            currBall.style.opacity = 0; //hide
+            prevBall.style.opacity = 1; //display
+
+            setTimeout(() => {
+                animateBalls(idx + 1);
+            }, 500);
+
+        }
+        //CALL
+        // animateBalls(0); 
+    </script>
+</body>
+</html>
