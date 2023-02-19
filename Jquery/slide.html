@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button class="slideDown">slide down</button>
+    <button class="slideUp">slide up</button>
+    <button class="toggle">toggle</button>
+    <p style="padding: 50px; background-color: lightblue; width: 400px;">I have the power to be visible and invisible</p>
+
+    <script>
+
+        //hide and show with animation is slideUp and SlideDown
+        $(".slideDown").click( (e) => {
+            $("p").slideDown("slow"); //makes visible in down direction
+        });
+        $(".slideUp").click((e) => {
+            $("p").slideUp("fast"); //makes invisible in up direction
+        })
+        $(".toggle").click((e) => {
+            $("p").slideToggle(5000); //toggles between slideUp() and slideDown(    )
+        })
+
+    </script>
+    
+</body>
+</html>
