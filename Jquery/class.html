@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: lightblue;
+
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- ADD CLASS -->
+    <!-- <div style="width: 300px; height: 300px;">hello</div>
+    <button>make it blue</button> -->
+
+    <!-- <div  class="blue">hello1</div>
+    <button>remove blue</button>
+    <script>
+        //1. add class
+        // $("button").click((e) => {
+        //     $("div").addClass("blue ");
+        // });
+
+        //2. add multiple class
+        // $("button").click((e) => {
+        //     $("div").addClass("blue red");
+        // });
+
+        //REMOVE CLASS
+        //1. remove class
+        $("button").click((e) => {
+            $("div").removeClass("blue");
+        }) 
+    </script> -->
+    <!-- <div style="height: 300px; width: 300px;" class="blue"></div>
+    <button>toggle</button>
+    <script>
+        $("button").click((e) => {
+            $("div").toggle("blue");
+        })
+    </script> -->
+    <div><h1>1</h1> </div>
+    <div><h1>2</h1> </div>
+    <script>
+        $("h1").each((index) => {
+            console.log($(this));
+        })
+    </script>
+</body>
+</html>
