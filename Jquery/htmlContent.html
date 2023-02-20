@@ -8,6 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- <button class="showText">Show Text</button>
+    <button class="showHTML">Show Html</button>
+    <p><bold>hello</bold></p>     -->
+    <input type="text">
+    <button class="getValue">get value</button>
+    <button class="getAttribute">get attribute</button>
 </body>
+<script>
+    // $(".showText").click((e) => {
+    //     alert($("p").text()); 
+    // });
+    // $(".showHTML").click( (e) => {
+    //     alert($("p").html());
+    // });
+    $(".getValue").click((e) => {
+        alert($("input").val());
+    });
+    $(".getAttribute").click((e) => {
+        alert($("input").attr("type"));
+    })
+</script>
 </html>
