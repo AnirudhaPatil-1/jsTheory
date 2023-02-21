@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- add single element -->
-    <button class="addDiv">add div</button>
+    <!-- <button class="addDiv">add div</button>
     <button class="prepend">prepend div</button>
     <script>
         // append
@@ -23,6 +23,35 @@
             let div = $("<div></div>").text("pre hello");
             $("body").prepend(div);
         })
+    </script> -->
+
+    <!-- add multiple elements -->
+    <!-- <button class="addElements">Add ELEMENTS</button>
+    <script>
+        $(".addElements").click((e) => {
+            let div = $("<div></div>").text("hello");
+            let p = $("<p></p>").text("I am paragraph");
+            $("body").prepend(div, p);
+        })
+    </script> -->
+
+    <!-- remove element -->
+    <!-- <button class="removeDiv">Remove div</button>
+    <div>I am being deleted</div>
+    <script>
+        $(".removeDiv").click((e) => {
+            $("div").remove();
+        })
+    </script> -->
+
+    <!-- Empty the element -->
+    <button>Empty div element</button>
+    <div><p> I  div have paragraph element in me</p> </div>
+    <script>
+        $("button").click((e) => {
+            $("div").empty();
+        })
     </script>
+
 </body>
 </html>
