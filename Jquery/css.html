@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Add background Color -->
+    <!-- add single css property -->
+    <!-- <div style="width: 300px; height: 300px; ;"></div>
+    <button>Add bgColor</button>
+    <script>
+        $("button").click((e) => {
+            $("div").css("background-color", "lightblue");
+        })
+    </script> -->
+    <!-- add multiple css properties in one go -->
+    <!-- <button>Add multiple CSS property</button>
+    <div>I am div</div>
+    <script>
+        $("button").click((e) => {
+            $("div").css({
+                "height": "300px",
+                "width": "300px",
+                "background-color": "lightyellow"
+            })
+        })
+    </script> -->
+
+    <!-- Get css property -->
+    <!-- <button>Get css property: width</button>
+    <div style="width:300px; height: 400px; background-color: yellow;"></div>
+    <script>
+        $("button").click((e) => {
+            alert($("div").css("width"));
+        })
+    </script> -->
+
+    <!-- Get multiple css property -->
+    <button>Get multiple css property</button>
+    <div style="width:200px; height: 300px; background-color: yellow;">I have multiple css property</div>
+    <script>
+        $("button").click((e) => {
+            console.log($("div").css(["width", "height", "background-color"]));
+        })
+    </script>
+
+</body>
+</html>
