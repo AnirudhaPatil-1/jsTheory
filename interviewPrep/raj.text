@@ -4,9 +4,9 @@ Make a list of Javascript interview questions :
  1. ALL string methods : 
  2. Array methods : 
  3.	reduce()	
- 3. JSON.stringfy(), 
- 4. Recurrsion
- 6. Classes and OOP : Class, extend, interface, enspsulation, overloading, static.
+ 3. JSON.stringify(), 
+ 4. Recursion
+ 6. Classes and OOP : Class, extend, interface, encapsulation, overloading, static.
  7. Destructing : array and object
  8. Object.keys, values, entires
  9. Weak map and weak set 
@@ -15,19 +15,20 @@ Make a list of Javascript interview questions :
  11. deep copy vs shallow copy.    
 
 Data structure in Javascript : 
-https://www.youtube.com/watch?v=RBSGKlAvoiM&t=102s
+FreeCodeCamp - Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer (8h)
+link: https://www.youtube.com/watch?v=RBSGKlAvoiM&t=102s
 
 
-# Interview theoery questions : 
+# Interview theory questions : 
 	1. ES features: 
 	2. Arrow function vs normal function : 
 	3. Data types : 
-	4. Pollyfills : write a pollyfil for bind()
+	4. Polyfills : write a Polyfills for bind()
 	5. Rest parameters and spread syntax
 	6. Object 
-           1. Differnet ways to create a object : https://dzone.com/articles/easy-javascript-part-13-four-ways-to-create-object
+           1. Different ways to create a object : https://dzone.com/articles/easy-javascript-part-13-four-ways-to-create-object
            2. Get, set and delete a value. 
-	   3. pass by refernce. 
+	   3. pass by reference. 
 	7. Numbers methods(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 	8. String methods ()
 	9. Array methods.
@@ -44,7 +45,7 @@ https://www.youtube.com/watch?v=RBSGKlAvoiM&t=102s
 	20. F.prototype
 	21. Native prototypes
 	22. Prototype methods, objects without _proto_
-	23. OOP : Class, extend, interface, enspsulation, 
+	23. OOP : Class, extend, interface, encapsulation, 
 	24. Mixins
 	25. Try catch
 	26. promises an callbacks
@@ -62,11 +63,11 @@ https://www.youtube.com/watch?v=RBSGKlAvoiM&t=102s
 	38. Debouncing
 	39. Throttling
 	40. hosting
-	41. clousre
-	42. Casting and converstions
+	41. closure
+	42. Casting and conversations
         44. Loops 
 	45. let vs var and there scope.	
-	46. diffence between filter() and find()
+	46. difference between filter() and find()
 	47. map() function
 	48. reduce()
 	49. microtask()
